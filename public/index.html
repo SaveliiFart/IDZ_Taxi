@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Диспетчер таксі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        const testSocket = io();
+        console.log('Socket підключено:', testSocket.connected);
+    </script>
+
+    <h1>🚖 Машини таксопарку</h1>
+    <ul id="car-list"></ul>
+
+    <h2>➕ Додати нову машину</h2>
+    <form id="car-form">
+        <input type="text" id="number" placeholder="Номер авто" required>
+        <input type="text" id="model" placeholder="Марка авто" required>
+        <input type="text" id="driver" placeholder="ПІБ водія" required>
+        <button type="submit">Додати</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
